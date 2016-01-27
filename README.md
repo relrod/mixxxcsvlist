@@ -20,6 +20,13 @@ Then run this program on it:
 
 `mixxxcsvlist /path/to/your/playlist.csv`
 
+## Installation
+
+* `git clone git://github.com/relrod/mixxxcsvlist && cd mixxxcsvlist`
+* `cabal install`
+
+Ensure that `~/.cabal/bin/` is in your `$PATH`, and you should be good to go.
+
 ## License
 
 BSD-2.

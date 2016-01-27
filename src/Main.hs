@@ -112,4 +112,4 @@ main = do
 prettySongLine :: Song -> String
 prettySongLine s =
   songNumber s ++ ". " ++ songArtist s ++ " - " ++ songTitle s
-  ++ " (" ++ songGenre s ++ ") " ++ songDuration s
+  ++ " - " ++ songDuration s
