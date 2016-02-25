@@ -17,22 +17,25 @@ import Text.Read (readMaybe)
 data Song = Song {
     songNumber :: String
   , songTimestamp :: String
-  , songPreview :: String
+  , songCoverArt :: String
   , songPlayed :: String
+  , songAlbumArtist :: String
+  , songAlbum :: String
   , songArtist :: String
   , songTitle :: String
-  , songAlbum :: String
   , songYear :: String
-  , songDuration :: String
   , songRating :: String
   , songGenre :: String
   , songComposer :: String
-  , songType :: String
+  , songGrouping :: String
   , songTrackNumber :: String
   , songKey :: String
-  , songDateAdded :: String
   , songBPM :: String
+  , songDuration :: String
   , songBitrate :: String
+  , songReplayGain :: String
+  , songType :: String
+  , songDateAdded :: String
   , songLocation :: String
   , songComment :: String
   } deriving (Eq, Show)
@@ -42,22 +45,25 @@ instance FromNamedRecord Song where
     Song
     <$> s .: "#"
     <*> s .: "Timestamp"
-    <*> s .: "Preview"
+    <*> s .: "Cover Art"
     <*> s .: "Played"
+    <*> s .: "Album Artist"
+    <*> s .: "Album"
     <*> s .: "Artist"
     <*> s .: "Title"
-    <*> s .: "Album"
     <*> s .: "Year"
-    <*> s .: "Duration"
     <*> s .: "Rating"
     <*> s .: "Genre"
     <*> s .: "Composer"
-    <*> s .: "Type"
+    <*> s .: "Grouping"
     <*> s .: "Track #"
     <*> s .: "Key"
-    <*> s .: "Date Added"
     <*> s .: "BPM"
+    <*> s .: "Duration"
     <*> s .: "Bitrate"
+    <*> s .: "Replay Gain"
+    <*> s .: "Type"
+    <*> s .: "Date Added"
     <*> s .: "Location"
     <*> s .: "Comment"
 
